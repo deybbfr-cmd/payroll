@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TransparED</title>
+    <style>
+    
+        table {
+        border: 2px solid #a94442;   
+        border-radius: 6px;          
+        padding: 10px;             
+        margin: 0px 0;              
+        background-color: #fff;    
+        height: 100px;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <center> 
+            <img src="logo.png" width="120" height="80">
+            <h2 style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 24px; color: rgba(156, 54, 14, 0.87); margin-top: -3px; margin-bottom: 4px;">COLEGIO DE SAN GABRIEL ARCANGEL, INC.</h2>
+            <h4 style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 18px; color: black; margin-top: 0px; margin-bottom: 0px;">Area E Brgy Fatima 1, Sapang Palay, San Jose del Monte, Philippines, 3023</h4>
+            <h3 style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 24px; color: rgba(156, 54, 14, 0.87); margin-top: 0px; margin-bottom: 0px;">An Automated Grading System that shows Fairness and Transparency: </h3>
+        </center>
+
+        <center><hr width="1200" size="4" color="red"></center>
+
+        <br>
+
+        <form>
+
+            <table border="0" align="center">
+                <tr>
+                   <th>Students Info And Subjects</th>
+                </tr>
+
+                <br>
+
+                <tr>
+                    <td><label for="student">Student Name:</label></td>
+                    <td><input type="text" name="sName" id="student" style="width: 100%;" placeholder="Please Enter Full Name of Student" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="course">Course:</label></td>
+                    <td>
+                        <select name="course" id="course" style="width: 50%;">
+                            <option name="course">Select Course</option>
+                            <option name="course">BSHM</option>
+                            <option name="course">BSTM</option>
+                            <option name="course">AB Psych</option>
+                            <option name="course">ABComm</option>
+                            <option name="course">ABPolsci</option>
+                            <option name="course">BSSW</option>
+                            <option name="course">BPA</option>
+                            <option name="course">BSCE</option>
+                            <option name="course">BSEE</option>
+                            <option name="course">BSECE</option>
+                            <option name="course">BSBio</option>
+                            <option name="course">BSMid</option>
+                            <option name="course">BSPharma</option>
+                            <option name="course">BSMedtech</option>
+                            <option name="course">BSRadtech</option>
+                            <option name="course">BSN</option>
+                            <option name="course">BEED</option>
+                            <option name="course">BSED major in English</option>
+                            <option name="course">BSED major in Filipino</option>
+                            <option name="course">BSED major in Mathematics</option>
+                            <option name="course">BSED major in Biological Science</option>
+                            <option name="course">Bachelor of Physical Education</option>
+                            <option name="course">BSBA major in Management</option>
+                            <option name="course">BSBA major in HRDM</option>
+                            <option name="course">BSA</option>
+                            <option name="course">BSAIS</option>
+                            <option name="course">BSCA</option>
+                            <option name="course">BSES</option>
+                            <option name="course">BSCrim</option>
+                            <option name="course">BSISM</option>
+                            <option name="course">BLIS</option>
+                            <option name="course">BSCS</option>
+                            <option name="course">BSCpE</option>
+                            <option name="course">BSIT</option>
+                            <option name="course">ACT</option>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="section">Section:</label></td>
+                    <td>
+                        <select name="section" id="section" style="width: 50;">
+                            <option name="section">Select Section</option>
+                            <option name="section">Irregular</option>
+                            <option name="section">1-1</option>
+                            <option name="section">1-2</option>
+                            <option name="section">1-3</option>
+                            <option name="section">1-4</option>
+                            <option name="section">1-5</option>
+                            <option name="section">1-6</option>
+                            <option name="section">2-1</option>
+                            <option name="section">2-2</option>
+                            <option name="section">2-3</option>
+                            <option name="section">2-4</option>
+                            <option name="section">2-5</option>
+                            <option name="section">2-6</option>
+                            <option name="section">3-1</option>
+                            <option name="section">3-2</option>
+                            <option name="section">3-3</option>
+                            <option name="section">3-4</option>
+                            <option name="section">4-1</option>
+                            <option name="section">4-2</option>
+                            <option name="section">4-3</option>
+                            <option name="section">4-4</option>
+                            <option name="section">5-1</option>
+                            <option name="section">5-2</option>
+                            <option name="section">5-3</option>
+                            <option name="section">5-4</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="subject">Subject:</label></td>
+                    <td><input type="text" name="subject" id="subject" style="width: 100%;" placeholder="Please Enter Subject Name" required></td>
+                </tr>
+            </table>
+
+            <br> <table border="0" width="70%" style="border-collapse:collapse; text-align:center;">
+                <tr>
+                    <th style="text-align: left;">Other Grades</th> 
+                    <th>Raw Score</th>
+                    <th>Max Score</th>
+                    <th>Weight(%)</th>
+                    <th>Total</th>
+                </tr>
+
+                <br>
+
+                <tr>
+                    <td style="text-align:left;">Attendance:</td>
+                    <td><input type="number" id="rawAttendance" style="width:70px;" oninput="computeTotal('Attendance'); computeSummary()"></td>
+                    <td>/<input type="number" id="maxAttendance" value="100" style="width:70px;" oninput="computeTotal('Attendance'); computeSummary()"></td>
+                    <td>x<input type="number" id="weightAttendance" value="10" style="width:70px;" oninput="computeTotal('Attendance'); computeSummary()">%</td>
+                    <td>=<input type="text" id="totalAttendance" style="width:70px;" readonly></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align:left;">Quizzes:</td>
+                    <td><input type="number" id="rawQuizzes" style="width:70px;" oninput="computeTotal('Quizzes'); computeSummary()"></td>
+                    <td>/<input type="number" id="maxQuizzes" value="100" style="width:70px;" oninput="computeTotal('Quizzes'); computeSummary()"></td>
+                    <td>x<input type="number" id="weightQuizzes" value="10" style="width:70px;" oninput="computeTotal('Quizzes'); computeSummary()">%</td>
+                    <td>=<input type="text" id="totalQuizzes" style="width:70px;" readonly></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align:left;">Recitation:</td>
+                    <td><input type="number" id="rawRecitation" style="width:70px;" oninput="computeTotal('Recitation'); computeSummary()"></td>
+                    <td>/<input type="number" id="maxRecitation" value="100" style="width:70px;" oninput="computeTotal('Recitation'); computeSummary()"></td>
+                    <td>x<input type="number" id="weightRecitation" value="10" style="width:70px;" oninput="computeTotal('Recitation'); computeSummary()">%</td>
+                    <td>=<input type="text" id="totalRecitation" style="width:70px;" readonly></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align:left;">Projects:</td>
+                    <td><input type="number" id="rawProjects" style="width:70px;" oninput="computeTotal('Projects'); computeSummary()"></td>
+                    <td>/<input type="number" id="maxProjects" value="100" style="width:70px;" oninput="computeTotal('Projects'); computeSummary()"></td>
+                    <td>x<input type="number" id="weightProjects" value="10" style="width:70px;" oninput="computeTotal('Projects'); computeSummary()">%</td>
+                    <td>=<input type="text" id="totalProjects" style="width:70px;" readonly></td>
+                </tr>
+            </table>
+        </form>
+
+        <script>
+            function computeTotal(category) {
+                let raw = parseFloat(document.getElementById('raw'+ category).value) || 0;
+                let max = parseFloat(document.getElementById('max' + category).value) || 100;
+                let weight = parseFloat(document.getElementById('weight' + category).value) || 0;
+
+                if (max <= 0) {
+                    document.getElementById('total' + category).value = '';
+                    return;
+                }
+                let total = (raw / max) * weight;
+                document.getElementById('total' + category).value = total.toFixed(2);
+            }
+        </script>
+
+        <br> <table border="0" width="70%" style="border-collapse:collapse; text-align:center;">
+            <tr>
+                <th style="text-align: left;">Major Examinations</th> 
+                <th>Raw Score</th>
+                <th>Max Score</th>
+                <th>Weight(%)</th>
+                <th>Total</th>
+            </tr>
+
+            <br>
+
+            <tr>
+                <td style="text-align:left;">Prelim:</td>
+                <td><input type="number" id="rawPrelim" style="width:70px;" oninput="computeExam('Prelim')"></td>
+                <td>/<input type="number" id="maxPrelim" value="100" style="width:70px;" oninput="computeExam('Prelim'); computeSummary()"></td>
+                 <td>x<input type="number" id="weightPrelim" value="15" style="width:70px;" oninput="computeExam('Prelim'); computeSummary()">%</td>
+                 <td>=<input type="text" id="totalPrelim" style="width:70px;" readonly></td>
+            </tr>
+
+            <tr>
+                <td style="text-align:left;">Midterms:</td>
+                <td><input type="number" id="rawMidterm" style="width:70px;" oninput="computeExam('Midterm')"></td>
+                <td>/<input type="number" id="maxMidterm" value="100" style="width:70px;" oninput="computeExam('Midterm'); computeSummary()"></td>
+                <td>x<input type="number" id="weightMidterm" value="15" style="width:70px;" oninput="computeExam('Midterm'); computeSummary()">%</td>
+                <td>=<input type="text" id="totalMidterm" style="width:70px;" readonly></td>
+            </tr>
+
+            <tr>
+                <td style="text-align:left;">Semi-Finals:</td>
+                <td><input type="number" id="rawSemiFinals" style="width:70px;" oninput="computeExam('SemiFinals'); computeSummary()"></td>
+                <td>/<input type="number" id="maxSemiFinals" value="100" style="width:70px;" oninput="computeExam('SemiFinals'); computeSummary()"></td>
+                <td>x<input type="number" id="weightSemiFinals" value="15" style="width:70px;" oninput="computeExam('SemiFinals'); computeSummary()">%</td>
+                <td>=<input type="text" id="totalSemiFinals" style="width:70px;" readonly></td>
+            </tr>
+
+            <tr>
+                <td style="text-align:left;">Finals:</td>
+                <td><input type="number" id="rawFinals" style="width:70px;" oninput="computeExam('Finals'); computeSummary()"></td>
+                <td>/<input type="number" id="maxFinals" value="100" style="width:70px;" oninput="computeExam('Finals'); computeSummary()"></td>
+                <td>x<input type="number" id="weightFinals" value="15" style="width:70px;" oninput="computeExam('Finals'); computeSummary()">%</td>
+                <td>=<input type="text" id="totalFinals" style="width:70px;" readonly></td>
+            </tr>
+            
+            <script>
+                function computeExam(exam) {
+                    let raw = parseFloat(document.getElementById('raw'+ exam).value) || 0;
+                    let max = parseFloat(document.getElementById('max' + exam).value) || 100;
+                    let weight = parseFloat(document.getElementById('weight' + exam).value) || 0;
+
+                    if (max <= 0) {
+                    document.getElementById('total' + exam).value = '';
+                    return;
+                    }
+                    let total = (raw / max) * weight;
+                    document.getElementById('total' + exam).value = total.toFixed(2);
+                }
+            </script>
+        </table>
+
+        <br> <table border="0" width="50%" style="border-collapse:collapse; text-align:center;">
+            <tr>
+                 <th style="text-align: left;">Total Grade</th> 
+            </tr>
+
+            <tr>
+                <td style="text-align: center;">Average Final Grade:</td>
+                <td><input type="text" id="averageGrade" style="width: 70px;" readonly></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;">Numerical Grade:</td>
+                <td><input type="text" id="numericalGrade" style="width: 70px;" readonly></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;">Remarks:</td>
+                <td><input type="text" id="remark" style="width: 70px;" readonly></td>
+            </tr>
+
+            <script>
+                function computeSummary() {
+                    let components = ['Attendance','Quizzes','Recitation','Projects','Prelim','Midterm','SemiFinals','Finals'];
+
+                    let sum=0
+                    let count=0
+
+                    components.forEach( c => {
+                        let el = document.getElementById('total' + c);
+                        if (el && el.value !== '') {
+                           let val = parseFloat(el.value);
+                           if (!isNaN(val)) {
+                            sum += val;
+                            count++;
+                           }
+                        }
+                    });
+
+                    if (count < components.length) {
+                        document.getElementById('averageGrade').value = '';
+                        document.getElementById('numericalGrade').value = '';
+                        document.getElementById('remark').value = '';
+                        return;
+                    }
+
+                    let average = sum;
+                    document.getElementById('averageGrade').value = average.toFixed(2);
+
+                    let numerical;
+                    if (average >= 97) numerical = 1.0;
+                    else if (average >= 94) numerical = 1.25;
+                    else if (average >= 91) numerical = 1.5;
+                    else if (average >= 88) numerical = 1.75;
+                    else if (average >= 85) numerical = 2.0;
+                    else if (average >= 82) numerical = 2.25;
+                    else if (average >= 79) numerical = 2.5;
+                    else if (average >= 76) numerical = 2.75;
+                    else if (average >= 75) numerical = 3.0;
+                    else numerical = 5.0;
+
+                    document.getElementById('numericalGrade').value = numerical;
+                    document.getElementById('remark').value = (numerical <= 3.0) ? "Passed" : "Failed";
+                }
+            </script>
+        </table>
+
+        <button onclick="saveGrades()">Save Grades</button>
+        <button onclick="clearGrades()">Clear Grades</button>
+
+        <script>
+            function saveGrades() {
+                alert("Grades have been saved successfully!");
+                console.log("Saved grades:", {
+                     average: document.getElementById('averageGrade').value,
+                     numerical: document.getElementById('numericalGrade').value,
+                     remark: document.getElementById('remark').value
+                });
+
+            }
+
+            function clearGrades() {
+                let inputs = document.querySelectorAll("input, select");
+
+                inputs.forEach(el => {
+                    let id = el.id.toLowerCase();
+
+                    if (id.startsWith("raw") || id.startsWith("total") ||
+                         id === "averagegrade" || id === "numericalgrade" || id === "remark" ||
+                         id === "student" || id === "subject") {
+                            el.value = "";
+                        }
+                    if (id === "course" || id === "section") {
+                        el.selectedIndex = 0;
+                    }
+                });
+      
+            }
+        </script>
+
+    </body>
+</html>
