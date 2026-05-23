@@ -1,0 +1,153 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title> Employee Payroll System </title>
+    </head>
+    <body>
+
+        <center> 
+            <img src="logo.png" width="120" height="80">
+        
+            
+            <h2 style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 24px; color: rgba(156, 54, 14, 0.87); margin-top: -3px; margin-bottom: 4px;">COLEGIO DE SAN GABRIEL ARCANGEL, INC.</h2>
+            <h3 style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 24px; color: rgba(46, 59, 180, 0.986); margin-top: -8px; margin-bottom: -5px;">Employee Payroll Accounts</h3>
+            <h4 style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 18px; color: black; margin-top: 5px; margin-bottom: 0px;">Area E Brgy Fatima 1, Sapang Palay, San Jose del Monte, Philippines, 3023</h4>
+        </center>
+
+        <center><hr width="1200" size="4" color="red"></center>
+
+        <br>
+
+        <form>
+            <table border="0" align="left">
+                <tr>
+                    <td><label for="Employee">Employee Name:</label></td>
+                    <td><input type="text" name="eName" id="Employee" style="width: 90%;" placeholder="Please enter your full name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="designation">Designation:</label></td>
+                    <td>
+                        <select name="designation" id="designation" style="width: 70%;">
+                            <option value="25000.00">Dean</option>
+                            <option value="20000.00">Program Head</option>
+                            <option value="18000.00">Librarian</option>
+                            <option value="15000.00">Instructor 5</option>
+                            <option value="14000.00">Instructor 4</option>
+                            <option value="13000.00">Instructor 3</option>
+                            <option value="12000.00">Instructor 2</option>
+                            <option value="11000.00">Instructor 1</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="hoursWorked">Hours Worked:</label></td>
+                    <td><input type="number" name="hoursWorked" id="hoursWorked" placeholder="Enter your working hours" required></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="button" onclick="
+                            if (this.form.eName.value == '' || this.form.hoursWorked.value == '') {
+                                alert('Invalid information: Please fill up Employee Name and Hours Worked First!');
+                            } else {
+                                var m = parseFloat(this.form.designation.value);
+                                var d = m / 22;
+                                var h = d / 8;
+                                var hrs = parseFloat(this.form.hoursWorked.value) || 0;
+                                
+                                var g = h * hrs;
+
+                                var s = g * 0.05;
+                                var ph = g * 0.025;
+                                var p = 300;
+                                var t = g * 0.10;
+                                var td = s + ph + p + t;
+                                var n = g - td;
+
+                                this.form.outMonthly.value = m.toFixed(2);
+                                this.form.outDaily.value = d.toFixed(2);
+                                this.form.outHourly.value = h.toFixed(2);
+                                this.form.outGross.value = g.toFixed(2);
+                                
+                                this.form.outSSS.value = s.toFixed(2);
+                                this.form.outPhilHealth.value = ph.toFixed(2);
+                                this.form.outPAGIBIG.value = p.toFixed(2);
+                                this.form.outTax.value = t.toFixed(2);
+                                this.form.outTotalDeductions.value = td.toFixed(2);
+                                
+                                this.form.outNetPay.value = n.toFixed(2);
+                            }
+                        ">Calculate Payroll</button>
+
+                        <button type="reset">Clear</button>
+                    </td>
+                </tr>
+            </table>
+
+            <br> <table width="100%" border="0">
+                <tr>
+                    <td valign="top">
+                        <h3>PAYROLL INFORMATION</h3>
+                        <table border="0">
+                            <tr>
+                                <td>Monthly Rate:</td>
+                                <td><input type="text" name="outMonthly" readonly style="border:none; background:transparent; outline:none;"></td>
+                            </tr>
+                            <tr>
+                                <td>Daily Rate:</td>
+                                <td><input type="text" name="outDaily" readonly style="border:none; background:transparent; outline:none;"></td>
+                            </tr>
+                            <tr>
+                                <td>Hourly Rate:</td>
+                                <td><input type="text" name="outHourly" readonly style="border:none; background:transparent; outline:none;"></td>
+                            </tr>
+                            <tr>
+                                <td>Gross Pay:</td>
+                                <td><input type="text" name="outGross" readonly style="border:none; background:transparent; outline:none; font-weight:bold;"></td>
+                            </tr>
+                        </table>
+                    </td>
+
+                    <td valign="top">
+                        <h3>DEDUCTIONS</h3>
+                        <table border="0">
+                            <tr>
+                                <td>SSS:</td>
+                                <td><input type="text" name="outSSS" readonly style="border:none; background:transparent; outline:none;"></td>
+                            </tr>
+                            <tr>
+                                <td>PhilHealth:</td>
+                                <td><input type="text" name="outPhilHealth" readonly style="border:none; background:transparent; outline:none;"></td>
+                            </tr>
+                            <tr>
+                                <td>PAGIBIG:</td>
+                                <td><input type="text" name="outPAGIBIG" readonly style="border:none; background:transparent; outline:none;"></td>
+                            </tr>
+                            <tr>
+                                <td>Tax:</td>
+                                <td><input type="text" name="outTax" readonly style="border:none; background:transparent; outline:none;"></td>
+                            </tr>
+                            <tr>
+                                <td>Total Deductions:</td>
+                                <td><input type="text" name="outTotalDeductions" readonly style="border:none; background:transparent; outline:none; font-weight:bold; color:rgb(228, 46, 46);"></td>
+                            </tr>
+                        </table>
+                    </td>
+
+                    <td valign="top">
+                        <h3>NET PAY</h3>
+                        <table border="0">
+                            <tr>
+                                <td>Take Home Pay:</td>
+                                <td><input type="text" name="outNetPay" readonly style="border:none; background:transparent; outline:none; font-weight:bold; color:rgb(19, 100, 19); font-size:1.1em;"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </body>
+    </html>
