@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Process</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="products.html" class="return-home">Back</a>
+
+    <main>
+        <section class="page-section">
+            <h1>Place Your Order</h1>
+            <form class="buy-form" id="buyForm">
+
+                <div class="product-picker">
+                    <span class="product-picker-label">Select a Product Sample:</span>
+                    <div class="product-grid-select">
+                        <label class="product-option">
+                            <input type="checkbox" name="product" value="Sample 1" />
+                            <div class="product-option-card">
+                                <img src="images/product1.jpg" alt="Sample 1" />
+                                <span>Sample 1</span>
+                            </div>
+                        </label>
+                        <label class="product-option">
+                            <input type="checkbox" name="product" value="Sample 2" />
+                            <div class="product-option-card">
+                                <img src="images/product2.jpg" alt="Sample 2" />
+                                <span>Sample 2</span>
+                            </div>
+                        </label>
+                        <label class="product-option">
+                            <input type="checkbox" name="product" value="Sample 3" />
+                            <div class="product-option-card">
+                                <img src="images/product3.jpg" alt="Sample 3" />
+                                <span>Sample 3</span>
+                            </div>
+                        </label>
+                        <label class="product-option">
+                            <input type="checkbox" name="product" value="Sample 4" />
+                            <div class="product-option-card">
+                                <img src="images/product4.jpg" alt="Sample 4" />
+                                <span>Sample 4</span>
+                            </div>
+                        </label>
+                        <label class="product-option">
+                            <input type="checkbox" name="product" value="Sample 5" />
+                            <div class="product-option-card">
+                                <img src="images/product5.jpg" alt="Sample 5" />
+                                <span>Sample 5</span>
+                            </div>
+                        </label>
+                        <label class="product-option">
+                            <input type="checkbox" name="product" value="Sample 6" />
+                            <div class="product-option-card">
+                                <img src="images/product6.jpg" alt="Sample 6" />
+                                <span>Sample 6</span>
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <label>Full Name:<br /><input type="text" name="name" required /></label>
+                <label>Address:<br /><input type="text" name="address" required /></label>
+                <label>Email:<br /><input type="email" name="email" required /></label>
+                <label>Contact Number:<br /><input type="number" name="contact" required /></label>
+                <label>Quantity:<br /><input type="number" name="quantity" min="1" required /></label>
+                <label>Special Requests:<br /><textarea name="requests" placeholder="Any custom design details..."></textarea></label>
+               <label>Mode of Payment:<br />
+                    <select name="payment">
+                        <option>GCash</option>
+                        <option>PayMaya</option>
+                        <option>Cash on Pickup</option>
+                        <option>Bank Transfer</option>
+                    </select> 
+                </label>
+
+                <button type="submit">Submit Order</button>
+            </form>
+        </section>
+
+        <div id="order-popup" class="popup">
+            <div class="popup-content">
+                <h2>✅ Order Submitted</h2>
+                <p>Your order has been received.<br>
+                Purpose: This confirms that your order details are logged and our team will process it soon.</p>
+                <button id="order-popup-close">OK</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
